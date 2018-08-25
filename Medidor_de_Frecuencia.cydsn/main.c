@@ -11,11 +11,37 @@
 */
 #include "project.h"
 
-int main(void)
-{
-    CyGlobalIntEnable; /* Enable global interrupts. */
+uint8 resolucion;
 
-    /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+CY_ISR(InteQi){
+    Qi_ClearInterrupt();//Limpia interucpcion en puerto
+}
+
+CY_ISR(InteSw){
+    switch(sw_Read()){
+    case 0x06:
+        resolucion=100;
+        break;
+    case 0x05:
+        resolucion=200;
+        break;
+    case 0x03:
+        resolucion=7;
+        break;
+     default:
+        break;
+    }
+    sw_ClearInterrupt();//Limpia interupcion en el puerto
+}
+
+
+int main(void)
+{   
+    
+    CyGlobalIntEnable; /* Enable global interrupts. */
+    sw_irq_StartEx(InteSw);//Declara vector de interupcion para el bloque de interupcion
+    Qi_irq_StartEx(InteQi);//Declara vector de interupcion para el bloque de interupcion
+    LCD_Start();//Inicia LCD  y Carga caracteres personalizados 
 
     for(;;)
     {
@@ -23,4 +49,4 @@ int main(void)
     }
 }
 
-/* [] END OF FILE */
+

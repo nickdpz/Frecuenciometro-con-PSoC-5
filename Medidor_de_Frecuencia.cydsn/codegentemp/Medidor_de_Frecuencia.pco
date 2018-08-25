@@ -1,5 +1,5 @@
 # Medidor_de_Frecuencia
-# 2018-08-25 01:21:44Z
+# 2018-08-25 03:42:23Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -19,4 +19,7 @@ set_io "\LCD:LCDPort(3)\" iocell 12 3
 set_io "\LCD:LCDPort(4)\" iocell 12 4
 set_io "\LCD:LCDPort(5)\" iocell 12 5
 set_io "\LCD:LCDPort(6)\" iocell 12 6
+set_location "Qi" logicalport -1 -1 0
+set_io "Qi(0)" iocell 0 0
 set_location "sw_irq" interrupt -1 -1 6
+set_location "Qi_irq" interrupt -1 -1 4

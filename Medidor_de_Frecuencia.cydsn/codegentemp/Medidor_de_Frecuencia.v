@@ -1,6 +1,6 @@
 // ======================================================================
 // Medidor_de_Frecuencia.v generated from TopDesign.cysch
-// 08/24/2018 at 20:21
+// 08/24/2018 at 22:42
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -213,7 +213,22 @@ endmodule
 // top
 module top ;
 
+    electrical  Net_40;
+    electrical  Net_26;
+    electrical  Net_21;
+    electrical  Net_41;
+    electrical  Net_20;
+    electrical  Net_39;
+    electrical  Net_38;
           wire  Net_5;
+    electrical  Net_36;
+    electrical  Net_35;
+    electrical  Net_34;
+    electrical  Net_33;
+    electrical  Net_32;
+    electrical  Net_31;
+    electrical  Net_27;
+          wire  Net_12;
 
 
 	cy_isr_v1_0
@@ -273,7 +288,7 @@ module top ;
 		  .sio_vohsel(""),
 		  .slew_rate(3'b0_0_0),
 		  .spanning(0),
-		  .use_annotation(3'b0_0_0),
+		  .use_annotation(3'b1_1_1),
 		  .vtrip(6'b00_00_00),
 		  .width(3),
 		  .ovt_hyst_trim(3'b0_0_0),
@@ -287,6 +302,7 @@ module top ;
 		  .io({tmpIO_2__sw_net[2:0]}),
 		  .siovref(tmpSIOVREF__sw_net),
 		  .interrupt({Net_5}),
+		  .annotation({Net_39, Net_33, Net_35}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -297,6 +313,270 @@ module top ;
 	assign tmpOE__sw_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{3'b111} : {3'b111};
 
     CharLCD_v2_20_0 LCD ();
+
+	wire [0:0] tmpOE__Qi_net;
+	wire [0:0] tmpFB_0__Qi_net;
+	wire [0:0] tmpIO_0__Qi_net;
+	electrical [0:0] tmpSIOVREF__Qi_net;
+
+	cy_psoc3_pins_v1_10
+		#(.id("592c8c42-1998-4b9d-9d8a-184db8159935"),
+		  .drive_mode(3'b110),
+		  .ibuf_enabled(1'b1),
+		  .init_dr_st(1'b0),
+		  .input_clk_en(0),
+		  .input_sync(1'b0),
+		  .input_sync_mode(1'b0),
+		  .intr_mode(2'b01),
+		  .invert_in_clock(0),
+		  .invert_in_clock_en(0),
+		  .invert_in_reset(0),
+		  .invert_out_clock(0),
+		  .invert_out_clock_en(0),
+		  .invert_out_reset(0),
+		  .io_voltage(""),
+		  .layout_mode("CONTIGUOUS"),
+		  .oe_conn(1'b0),
+		  .oe_reset(0),
+		  .oe_sync(1'b0),
+		  .output_clk_en(0),
+		  .output_clock_mode(1'b0),
+		  .output_conn(1'b0),
+		  .output_mode(1'b0),
+		  .output_reset(0),
+		  .output_sync(1'b0),
+		  .pa_in_clock(-1),
+		  .pa_in_clock_en(-1),
+		  .pa_in_reset(-1),
+		  .pa_out_clock(-1),
+		  .pa_out_clock_en(-1),
+		  .pa_out_reset(-1),
+		  .pin_aliases(""),
+		  .pin_mode("I"),
+		  .por_state(4),
+		  .sio_group_cnt(0),
+		  .sio_hyst(1'b1),
+		  .sio_ibuf(""),
+		  .sio_info(2'b00),
+		  .sio_obuf(""),
+		  .sio_refsel(""),
+		  .sio_vtrip(""),
+		  .sio_hifreq(""),
+		  .sio_vohsel(""),
+		  .slew_rate(1'b0),
+		  .spanning(0),
+		  .use_annotation(1'b1),
+		  .vtrip(2'b00),
+		  .width(1),
+		  .ovt_hyst_trim(1'b0),
+		  .ovt_needed(1'b0),
+		  .ovt_slew_control(2'b00),
+		  .input_buffer_sel(2'b00))
+		Qi
+		 (.oe(tmpOE__Qi_net),
+		  .y({1'b0}),
+		  .fb({tmpFB_0__Qi_net[0:0]}),
+		  .io({tmpIO_0__Qi_net[0:0]}),
+		  .siovref(tmpSIOVREF__Qi_net),
+		  .interrupt({Net_12}),
+		  .annotation({Net_20}),
+		  .in_clock({1'b0}),
+		  .in_clock_en({1'b1}),
+		  .in_reset({1'b0}),
+		  .out_clock({1'b0}),
+		  .out_clock_en({1'b1}),
+		  .out_reset({1'b0}));
+
+	assign tmpOE__Qi_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+
+	cy_isr_v1_0
+		#(.int_type(2'b10))
+		Qi_irq
+		 (.int_signal(Net_12));
+
+
+    cy_annotation_universal_v1_0 Q_1 (
+        .connect({
+            Net_41,
+            Net_20
+        })
+    );
+    defparam Q_1.comp_name = "PhotoTrans_v1_0";
+    defparam Q_1.port_names = "C, E";
+    defparam Q_1.width = 2;
+
+    cy_annotation_universal_v1_0 R_1 (
+        .connect({
+            Net_26,
+            Net_20
+        })
+    );
+    defparam R_1.comp_name = "Resistor_v1_0";
+    defparam R_1.port_names = "T1, T2";
+    defparam R_1.width = 2;
+
+    cy_annotation_universal_v1_0 D_1 (
+        .connect({
+            Net_40,
+            Net_21
+        })
+    );
+    defparam D_1.comp_name = "PhotoDiode_v1_0";
+    defparam D_1.port_names = "A, K";
+    defparam D_1.width = 2;
+
+    cy_annotation_universal_v1_0 R_2 (
+        .connect({
+            Net_26,
+            Net_21
+        })
+    );
+    defparam R_2.comp_name = "Resistor_v1_0";
+    defparam R_2.port_names = "T1, T2";
+    defparam R_2.width = 2;
+
+    cy_annotation_universal_v1_0 PWR (
+        .connect({
+            Net_41
+        })
+    );
+    defparam PWR.comp_name = "Power_v1_0";
+    defparam PWR.port_names = "T1";
+    defparam PWR.width = 1;
+
+    cy_annotation_universal_v1_0 GND_1 (
+        .connect({
+            Net_26
+        })
+    );
+    defparam GND_1.comp_name = "Gnd_v1_0";
+    defparam GND_1.port_names = "T1";
+    defparam GND_1.width = 1;
+
+    cy_annotation_universal_v1_0 GND_2 (
+        .connect({
+            Net_27
+        })
+    );
+    defparam GND_2.comp_name = "Gnd_v1_0";
+    defparam GND_2.port_names = "T1";
+    defparam GND_2.width = 1;
+
+    cy_annotation_universal_v1_0 SW_1 (
+        .connect({
+            Net_27,
+            Net_39
+        })
+    );
+    defparam SW_1.comp_name = "SwitchSPST_v1_0";
+    defparam SW_1.port_names = "T1, T2";
+    defparam SW_1.width = 2;
+
+    cy_annotation_universal_v1_0 R_3 (
+        .connect({
+            Net_39,
+            Net_31
+        })
+    );
+    defparam R_3.comp_name = "Resistor_v1_0";
+    defparam R_3.port_names = "T1, T2";
+    defparam R_3.width = 2;
+
+    cy_annotation_universal_v1_0 PWR_1 (
+        .connect({
+            Net_31
+        })
+    );
+    defparam PWR_1.comp_name = "Power_v1_0";
+    defparam PWR_1.port_names = "T1";
+    defparam PWR_1.width = 1;
+
+    cy_annotation_universal_v1_0 GND_3 (
+        .connect({
+            Net_32
+        })
+    );
+    defparam GND_3.comp_name = "Gnd_v1_0";
+    defparam GND_3.port_names = "T1";
+    defparam GND_3.width = 1;
+
+    cy_annotation_universal_v1_0 SW_2 (
+        .connect({
+            Net_32,
+            Net_33
+        })
+    );
+    defparam SW_2.comp_name = "SwitchSPST_v1_0";
+    defparam SW_2.port_names = "T1, T2";
+    defparam SW_2.width = 2;
+
+    cy_annotation_universal_v1_0 R_4 (
+        .connect({
+            Net_33,
+            Net_34
+        })
+    );
+    defparam R_4.comp_name = "Resistor_v1_0";
+    defparam R_4.port_names = "T1, T2";
+    defparam R_4.width = 2;
+
+    cy_annotation_universal_v1_0 PWR_2 (
+        .connect({
+            Net_34
+        })
+    );
+    defparam PWR_2.comp_name = "Power_v1_0";
+    defparam PWR_2.port_names = "T1";
+    defparam PWR_2.width = 1;
+
+    cy_annotation_universal_v1_0 GND_4 (
+        .connect({
+            Net_38
+        })
+    );
+    defparam GND_4.comp_name = "Gnd_v1_0";
+    defparam GND_4.port_names = "T1";
+    defparam GND_4.width = 1;
+
+    cy_annotation_universal_v1_0 SW_3 (
+        .connect({
+            Net_38,
+            Net_35
+        })
+    );
+    defparam SW_3.comp_name = "SwitchSPST_v1_0";
+    defparam SW_3.port_names = "T1, T2";
+    defparam SW_3.width = 2;
+
+    cy_annotation_universal_v1_0 R_5 (
+        .connect({
+            Net_35,
+            Net_36
+        })
+    );
+    defparam R_5.comp_name = "Resistor_v1_0";
+    defparam R_5.port_names = "T1, T2";
+    defparam R_5.width = 2;
+
+    cy_annotation_universal_v1_0 PWR_3 (
+        .connect({
+            Net_36
+        })
+    );
+    defparam PWR_3.comp_name = "Power_v1_0";
+    defparam PWR_3.port_names = "T1";
+    defparam PWR_3.width = 1;
+
+    cy_annotation_universal_v1_0 MC_1 (
+        .connect({
+            Net_26,
+            Net_40
+        })
+    );
+    defparam MC_1.comp_name = "Microphone_v1_0";
+    defparam MC_1.port_names = "T1, T2";
+    defparam MC_1.width = 2;
 
 
 

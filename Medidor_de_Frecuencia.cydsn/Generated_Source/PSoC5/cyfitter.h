@@ -19,6 +19,50 @@
 #include "cydevice.h"
 #include "cydevice_trm.h"
 
+/* Qi */
+#define Qi__0__INTTYPE CYREG_PICU0_INTTYPE0
+#define Qi__0__MASK 0x01u
+#define Qi__0__PC CYREG_PRT0_PC0
+#define Qi__0__PORT 0u
+#define Qi__0__SHIFT 0u
+#define Qi__AG CYREG_PRT0_AG
+#define Qi__AMUX CYREG_PRT0_AMUX
+#define Qi__BIE CYREG_PRT0_BIE
+#define Qi__BIT_MASK CYREG_PRT0_BIT_MASK
+#define Qi__BYP CYREG_PRT0_BYP
+#define Qi__CTL CYREG_PRT0_CTL
+#define Qi__DM0 CYREG_PRT0_DM0
+#define Qi__DM1 CYREG_PRT0_DM1
+#define Qi__DM2 CYREG_PRT0_DM2
+#define Qi__DR CYREG_PRT0_DR
+#define Qi__INP_DIS CYREG_PRT0_INP_DIS
+#define Qi__INTSTAT CYREG_PICU0_INTSTAT
+#define Qi__INTTYPE_BASE CYDEV_PICU_INTTYPE_PICU0_BASE
+#define Qi__LCD_COM_SEG CYREG_PRT0_LCD_COM_SEG
+#define Qi__LCD_EN CYREG_PRT0_LCD_EN
+#define Qi__MASK 0x01u
+#define Qi__PORT 0u
+#define Qi__PRT CYREG_PRT0_PRT
+#define Qi__PRTDSI__CAPS_SEL CYREG_PRT0_CAPS_SEL
+#define Qi__PRTDSI__DBL_SYNC_IN CYREG_PRT0_DBL_SYNC_IN
+#define Qi__PRTDSI__OE_SEL0 CYREG_PRT0_OE_SEL0
+#define Qi__PRTDSI__OE_SEL1 CYREG_PRT0_OE_SEL1
+#define Qi__PRTDSI__OUT_SEL0 CYREG_PRT0_OUT_SEL0
+#define Qi__PRTDSI__OUT_SEL1 CYREG_PRT0_OUT_SEL1
+#define Qi__PRTDSI__SYNC_OUT CYREG_PRT0_SYNC_OUT
+#define Qi__PS CYREG_PRT0_PS
+#define Qi__SHIFT 0u
+#define Qi__SLW CYREG_PRT0_SLW
+#define Qi__SNAP CYREG_PICU0_SNAP
+#define Qi_irq__INTC_CLR_EN_REG CYREG_NVIC_CLRENA0
+#define Qi_irq__INTC_CLR_PD_REG CYREG_NVIC_CLRPEND0
+#define Qi_irq__INTC_MASK 0x10u
+#define Qi_irq__INTC_NUMBER 4u
+#define Qi_irq__INTC_PRIOR_NUM 7u
+#define Qi_irq__INTC_PRIOR_REG CYREG_NVIC_PRI_4
+#define Qi_irq__INTC_SET_EN_REG CYREG_NVIC_SETENA0
+#define Qi_irq__INTC_SET_PD_REG CYREG_NVIC_SETPEND0
+
 /* sw */
 #define sw__0__INTTYPE CYREG_PICU2_INTTYPE0
 #define sw__0__MASK 0x01u

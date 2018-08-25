@@ -103,6 +103,17 @@
 <v>Practica1\Medidor_de_Frecuencia\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
 <v>Practica1\Medidor_de_Frecuencia\cy_pins_v2_20</v>
 <v>Practica1\Medidor_de_Frecuencia\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Practica1\Medidor_de_Frecuencia\Gnd_v1_0</v>
+<v>Practica1\Medidor_de_Frecuencia\Gnd_v1_0\Gnd_v1_0.pdf</v>
+<v>Practica1\Medidor_de_Frecuencia\Microphone_v1_0.pdf</v>
+<v>Practica1\Medidor_de_Frecuencia\PhotoDiode_v1_0.pdf</v>
+<v>Practica1\Medidor_de_Frecuencia\PhotoTrans_v1_0.pdf</v>
+<v>Practica1\Medidor_de_Frecuencia\Power_v1_0</v>
+<v>Practica1\Medidor_de_Frecuencia\Power_v1_0\Power_v1_0.pdf</v>
+<v>Practica1\Medidor_de_Frecuencia\Resistor_v1_0</v>
+<v>Practica1\Medidor_de_Frecuencia\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>Practica1\Medidor_de_Frecuencia\SwitchSPST_v1_0</v>
+<v>Practica1\Medidor_de_Frecuencia\SwitchSPST_v1_0\SwitchSPST_v1_0.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Practica1</v>
@@ -116,6 +127,17 @@
 <v>Practica1\Medidor_de_Frecuencia\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
 <v>Practica1\Medidor_de_Frecuencia\cy_pins_v2_20</v>
 <v>Practica1\Medidor_de_Frecuencia\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Practica1\Medidor_de_Frecuencia\Gnd_v1_0</v>
+<v>Practica1\Medidor_de_Frecuencia\Gnd_v1_0\Gnd_v1_0.pdf</v>
+<v>Practica1\Medidor_de_Frecuencia\Microphone_v1_0.pdf</v>
+<v>Practica1\Medidor_de_Frecuencia\PhotoDiode_v1_0.pdf</v>
+<v>Practica1\Medidor_de_Frecuencia\PhotoTrans_v1_0.pdf</v>
+<v>Practica1\Medidor_de_Frecuencia\Power_v1_0</v>
+<v>Practica1\Medidor_de_Frecuencia\Power_v1_0\Power_v1_0.pdf</v>
+<v>Practica1\Medidor_de_Frecuencia\Resistor_v1_0</v>
+<v>Practica1\Medidor_de_Frecuencia\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>Practica1\Medidor_de_Frecuencia\SwitchSPST_v1_0</v>
+<v>Practica1\Medidor_de_Frecuencia\SwitchSPST_v1_0\SwitchSPST_v1_0.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -124,7 +146,17 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs />
+<OpenDocs>
+<name v=".\Medidor_de_Frecuencia.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Medidor_de_Frecuencia.cydsn\main.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="950, 454" SelectedTabbedMdiWindow="dea2142e-6184-4140-ab89-8a10df9d0131"><DocumentWindow Key="C:\Users\Nicolas Zamora\Documents\PSoC Creator\Practica1\Medidor_de_Frecuencia.cydsn\TopDesign\TopDesign.cysch" Guid="a2009fa5-71f0-4fcd-99cb-c5fcb17269ae" /><DocumentWindow Key="C:\Users\Nicolas Zamora\Documents\PSoC Creator\Practica1\Medidor_de_Frecuencia.cydsn\main.c" Guid="dea2142e-6184-4140-ab89-8a10df9d0131" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

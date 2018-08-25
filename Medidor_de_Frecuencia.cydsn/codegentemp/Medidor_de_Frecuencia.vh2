@@ -2,7 +2,7 @@
 --	Conversion of Medidor_de_Frecuencia.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Fri Aug 24 20:21:41 2018
+--	Fri Aug 24 22:42:20 2018
 --
 
 USE cypress.cypress.all;
@@ -24,6 +24,9 @@ SIGNAL tmpIO_2__sw_net_2 : bit;
 SIGNAL tmpIO_2__sw_net_1 : bit;
 SIGNAL tmpIO_2__sw_net_0 : bit;
 TERMINAL tmpSIOVREF__sw_net_0 : bit;
+TERMINAL Net_39 : bit;
+TERMINAL Net_33 : bit;
+TERMINAL Net_35 : bit;
 SIGNAL one : bit;
 SIGNAL \LCD:tmpOE__LCDPort_net_6\ : bit;
 SIGNAL \LCD:tmpOE__LCDPort_net_5\ : bit;
@@ -48,6 +51,22 @@ SIGNAL \LCD:tmpIO_6__LCDPort_net_1\ : bit;
 SIGNAL \LCD:tmpIO_6__LCDPort_net_0\ : bit;
 TERMINAL \LCD:tmpSIOVREF__LCDPort_net_0\ : bit;
 SIGNAL \LCD:tmpINTERRUPT_0__LCDPort_net_0\ : bit;
+SIGNAL tmpOE__Qi_net_0 : bit;
+SIGNAL tmpFB_0__Qi_net_0 : bit;
+SIGNAL tmpIO_0__Qi_net_0 : bit;
+TERMINAL tmpSIOVREF__Qi_net_0 : bit;
+TERMINAL Net_20 : bit;
+SIGNAL Net_12 : bit;
+TERMINAL Net_41 : bit;
+TERMINAL Net_26 : bit;
+TERMINAL Net_40 : bit;
+TERMINAL Net_21 : bit;
+TERMINAL Net_27 : bit;
+TERMINAL Net_31 : bit;
+TERMINAL Net_32 : bit;
+TERMINAL Net_34 : bit;
+TERMINAL Net_38 : bit;
+TERMINAL Net_36 : bit;
 BEGIN
 
 zero <=  ('0') ;
@@ -103,7 +122,7 @@ sw:cy_psoc3_pins_v1_10
 		width=>3,
 		port_alias_required=>'0',
 		port_alias_group=>"",
-		use_annotation=>"000",
+		use_annotation=>"111",
 		pa_in_clock=>-1,
 		pa_in_clock_en=>-1,
 		pa_in_reset=>-1,
@@ -120,7 +139,7 @@ sw:cy_psoc3_pins_v1_10
 		analog=>(open, open, open),
 		io=>(tmpIO_2__sw_net_2, tmpIO_2__sw_net_1, tmpIO_2__sw_net_0),
 		siovref=>(tmpSIOVREF__sw_net_0),
-		annotation=>(open, open, open),
+		annotation=>(Net_39, Net_33, Net_35),
 		in_clock=>zero,
 		in_clock_en=>tmpOE__sw_net_2,
 		in_reset=>zero,
@@ -204,5 +223,174 @@ sw:cy_psoc3_pins_v1_10
 		out_clock_en=>tmpOE__sw_net_2,
 		out_reset=>zero,
 		interrupt=>\LCD:tmpINTERRUPT_0__LCDPort_net_0\);
+Qi:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"592c8c42-1998-4b9d-9d8a-184db8159935",
+		drive_mode=>"110",
+		ibuf_enabled=>"1",
+		init_dr_st=>"0",
+		input_sync=>"0",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"01",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"0",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"I",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"00000000",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"00",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"1",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(tmpOE__sw_net_2),
+		y=>(zero),
+		fb=>(tmpFB_0__Qi_net_0),
+		analog=>(open),
+		io=>(tmpIO_0__Qi_net_0),
+		siovref=>(tmpSIOVREF__Qi_net_0),
+		annotation=>Net_20,
+		in_clock=>zero,
+		in_clock_en=>tmpOE__sw_net_2,
+		in_reset=>zero,
+		out_clock=>zero,
+		out_clock_en=>tmpOE__sw_net_2,
+		out_reset=>zero,
+		interrupt=>Net_12);
+Qi_irq:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
+	PORT MAP(int_signal=>Net_12);
+Q_1:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"PhotoTrans_v1_0",
+		port_names=>"C, E",
+		width=>2)
+	PORT MAP(connect=>(Net_41, Net_20));
+R_1:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Resistor_v1_0",
+		port_names=>"T1, T2",
+		width=>2)
+	PORT MAP(connect=>(Net_26, Net_20));
+D_1:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"PhotoDiode_v1_0",
+		port_names=>"A, K",
+		width=>2)
+	PORT MAP(connect=>(Net_40, Net_21));
+R_2:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Resistor_v1_0",
+		port_names=>"T1, T2",
+		width=>2)
+	PORT MAP(connect=>(Net_26, Net_21));
+PWR:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Power_v1_0",
+		port_names=>"T1",
+		width=>1)
+	PORT MAP(connect=>Net_41);
+GND_1:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Gnd_v1_0",
+		port_names=>"T1",
+		width=>1)
+	PORT MAP(connect=>Net_26);
+GND_2:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Gnd_v1_0",
+		port_names=>"T1",
+		width=>1)
+	PORT MAP(connect=>Net_27);
+SW_1:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"SwitchSPST_v1_0",
+		port_names=>"T1, T2",
+		width=>2)
+	PORT MAP(connect=>(Net_27, Net_39));
+R_3:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Resistor_v1_0",
+		port_names=>"T1, T2",
+		width=>2)
+	PORT MAP(connect=>(Net_39, Net_31));
+PWR_1:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Power_v1_0",
+		port_names=>"T1",
+		width=>1)
+	PORT MAP(connect=>Net_31);
+GND_3:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Gnd_v1_0",
+		port_names=>"T1",
+		width=>1)
+	PORT MAP(connect=>Net_32);
+SW_2:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"SwitchSPST_v1_0",
+		port_names=>"T1, T2",
+		width=>2)
+	PORT MAP(connect=>(Net_32, Net_33));
+R_4:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Resistor_v1_0",
+		port_names=>"T1, T2",
+		width=>2)
+	PORT MAP(connect=>(Net_33, Net_34));
+PWR_2:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Power_v1_0",
+		port_names=>"T1",
+		width=>1)
+	PORT MAP(connect=>Net_34);
+GND_4:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Gnd_v1_0",
+		port_names=>"T1",
+		width=>1)
+	PORT MAP(connect=>Net_38);
+SW_3:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"SwitchSPST_v1_0",
+		port_names=>"T1, T2",
+		width=>2)
+	PORT MAP(connect=>(Net_38, Net_35));
+R_5:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Resistor_v1_0",
+		port_names=>"T1, T2",
+		width=>2)
+	PORT MAP(connect=>(Net_35, Net_36));
+PWR_3:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Power_v1_0",
+		port_names=>"T1",
+		width=>1)
+	PORT MAP(connect=>Net_36);
+MC_1:cy_annotation_universal_v1_0
+	GENERIC MAP(comp_name=>"Microphone_v1_0",
+		port_names=>"T1, T2",
+		width=>2)
+	PORT MAP(connect=>(Net_26, Net_40));
 
 END R_T_L;

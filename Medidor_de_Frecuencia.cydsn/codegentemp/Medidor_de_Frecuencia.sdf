@@ -1,6 +1,6 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2018-08-25T01:21:47Z")
+ (DATE "2018-08-25T03:42:26Z")
  (DESIGN "Medidor_de_Frecuencia")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "PSoC Creator")
@@ -13,6 +13,8 @@
   (DELAY
    (ABSOLUTE
     (INTERCONNECT ClockBlock.clk_bus_glb sw_irq.clock (0.000:0.000:0.000))
+    (INTERCONNECT ClockBlock.clk_bus_glb Qi_irq.clock (0.000:0.000:0.000))
+    (INTERCONNECT Qi.interrupt Qi_irq.interrupt (1.000:1.000:1.000))
     (INTERCONNECT sw.interrupt sw_irq.interrupt (1.000:1.000:1.000))
     (INTERCONNECT sw\(0\)_PAD sw\(0\).pad_in (0.000:0.000:0.000))
     (INTERCONNECT sw\(1\)_PAD sw\(1\).pad_in (0.000:0.000:0.000))
@@ -24,6 +26,7 @@
     (INTERCONNECT \\LCD\:LCDPort\(4\)_PAD\\ \\LCD\:LCDPort\(4\)\\.pad_in (0.000:0.000:0.000))
     (INTERCONNECT \\LCD\:LCDPort\(5\)_PAD\\ \\LCD\:LCDPort\(5\)\\.pad_in (0.000:0.000:0.000))
     (INTERCONNECT \\LCD\:LCDPort\(6\)_PAD\\ \\LCD\:LCDPort\(6\)\\.pad_in (0.000:0.000:0.000))
+    (INTERCONNECT Qi\(0\)_PAD Qi\(0\).pad_in (0.000:0.000:0.000))
    )
   )
  )
