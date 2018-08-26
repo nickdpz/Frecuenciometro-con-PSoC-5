@@ -253,6 +253,8 @@
     <Group key="Pin">
       <Data key="8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba" value="sw" />
       <Data key="25fd4d68-ffd5-4503-a2b3-381d901732ae/ed092b9b-d398-4703-be89-cebf998501f6" value="LCD_LCDPort" />
+      <Data key="592c8c42-1998-4b9d-9d8a-184db8159935" value="Qi" />
+      <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="Pin" />
     </Group>
   </Group>
   <Group key="EEPROM">
@@ -3341,13 +3343,13 @@
   <Group key="Pin2">
     <Group key="8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba">
       <Group key="0">
-        <Data key="Port Format" value="2,0" />
+        <Data key="Port Format" value="3,0" />
       </Group>
       <Group key="1">
-        <Data key="Port Format" value="2,1" />
+        <Data key="Port Format" value="3,1" />
       </Group>
       <Group key="2">
-        <Data key="Port Format" value="2,2" />
+        <Data key="Port Format" value="3,2" />
       </Group>
     </Group>
     <Group key="25fd4d68-ffd5-4503-a2b3-381d901732ae/ed092b9b-d398-4703-be89-cebf998501f6">
@@ -3373,6 +3375,17 @@
         <Data key="Port Format" value="12,6" />
       </Group>
     </Group>
+    <Group key="592c8c42-1998-4b9d-9d8a-184db8159935">
+      <Group key="0">
+        <Data key="Port Format" value="2,7" />
+      </Group>
+    </Group>
+    <Group key="e851a3b9-efb8-48be-bbb8-b303b216c393">
+      <Group key="0">
+        <Data key="Port Format" value="2,1" />
+      </Group>
+    </Group>
+    <Group key="UnAssigned Pins" />
   </Group>
   <Group key="PlaceDir">
     <Data key="count" value="0" />

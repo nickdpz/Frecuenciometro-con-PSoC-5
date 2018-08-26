@@ -107,6 +107,9 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Qi.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Qi_irq.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Qi_irq.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Pin.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\Nicolas Zamora\Documents\PSoC Creator\Practica1\Medidor_de_Frecuencia.cydsn\Export\ARM_GCC_Generic">

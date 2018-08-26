@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Practica1\Medidor_de_Frecuencia\Source Files\main.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>Practica1</v>
 <v>Practica1\Medidor_de_Frecuencia</v>
@@ -73,6 +73,33 @@
 <ExpandedNodeIds>
 <v>Practica1</v>
 <v>Practica1\Medidor_de_Frecuencia</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\Qi.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\Qi_irq.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\sw.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\sw_irq.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.elf</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.hex</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.map</v>
 <v>Practica1\Medidor_de_Frecuencia\Medidor_de_Frecuencia.gpdsc</v>
 <v>Practica1\Medidor_de_Frecuencia\Medidor_de_Frecuencia.rpt</v>
 <v>Practica1\Medidor_de_Frecuencia\Medidor_de_Frecuencia_timing.html</v>
@@ -80,9 +107,7 @@
 <VisibleNodeIds>
 <v>Practica1</v>
 <v>Practica1\Medidor_de_Frecuencia</v>
-<v>Practica1\Medidor_de_Frecuencia\Medidor_de_Frecuencia.gpdsc</v>
 <v>Practica1\Medidor_de_Frecuencia\Medidor_de_Frecuencia.rpt</v>
-<v>Practica1\Medidor_de_Frecuencia\Medidor_de_Frecuencia_timing.html</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -99,10 +124,14 @@
 <v>Practica1\Medidor_de_Frecuencia\System Reference Guides</v>
 <v>Practica1\Medidor_de_Frecuencia\System Reference Guides\cy_boot_v5_70</v>
 <v>Practica1\Medidor_de_Frecuencia\CharLCD_v2_20.pdf</v>
+<v>Practica1\Medidor_de_Frecuencia\cy_clock_v2_20.pdf</v>
+<v>Practica1\Medidor_de_Frecuencia\cy_constant_v1_0</v>
+<v>Practica1\Medidor_de_Frecuencia\cy_constant_v1_0\cy_constant_v1_0.pdf</v>
 <v>Practica1\Medidor_de_Frecuencia\cy_isr_v1_70</v>
 <v>Practica1\Medidor_de_Frecuencia\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
 <v>Practica1\Medidor_de_Frecuencia\cy_pins_v2_20</v>
 <v>Practica1\Medidor_de_Frecuencia\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Practica1\Medidor_de_Frecuencia\FreqDiv_v1_0.pdf</v>
 <v>Practica1\Medidor_de_Frecuencia\Gnd_v1_0</v>
 <v>Practica1\Medidor_de_Frecuencia\Gnd_v1_0\Gnd_v1_0.pdf</v>
 <v>Practica1\Medidor_de_Frecuencia\Microphone_v1_0.pdf</v>
@@ -123,10 +152,14 @@
 <v>Practica1\Medidor_de_Frecuencia\System Reference Guides</v>
 <v>Practica1\Medidor_de_Frecuencia\System Reference Guides\cy_boot_v5_70</v>
 <v>Practica1\Medidor_de_Frecuencia\CharLCD_v2_20.pdf</v>
+<v>Practica1\Medidor_de_Frecuencia\cy_clock_v2_20.pdf</v>
+<v>Practica1\Medidor_de_Frecuencia\cy_constant_v1_0</v>
+<v>Practica1\Medidor_de_Frecuencia\cy_constant_v1_0\cy_constant_v1_0.pdf</v>
 <v>Practica1\Medidor_de_Frecuencia\cy_isr_v1_70</v>
 <v>Practica1\Medidor_de_Frecuencia\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
 <v>Practica1\Medidor_de_Frecuencia\cy_pins_v2_20</v>
 <v>Practica1\Medidor_de_Frecuencia\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Practica1\Medidor_de_Frecuencia\FreqDiv_v1_0.pdf</v>
 <v>Practica1\Medidor_de_Frecuencia\Gnd_v1_0</v>
 <v>Practica1\Medidor_de_Frecuencia\Gnd_v1_0\Gnd_v1_0.pdf</v>
 <v>Practica1\Medidor_de_Frecuencia\Microphone_v1_0.pdf</v>
@@ -149,6 +182,7 @@
 <OpenDocs>
 <name v=".\Medidor_de_Frecuencia.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\Medidor_de_Frecuencia.cydsn\main.c" />
+<name v=".\Medidor_de_Frecuencia.cydsn\Medidor_de_Frecuencia.cydwr" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -156,7 +190,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="950, 454" SelectedTabbedMdiWindow="dea2142e-6184-4140-ab89-8a10df9d0131"><DocumentWindow Key="C:\Users\Nicolas Zamora\Documents\PSoC Creator\Practica1\Medidor_de_Frecuencia.cydsn\TopDesign\TopDesign.cysch" Guid="a2009fa5-71f0-4fcd-99cb-c5fcb17269ae" /><DocumentWindow Key="C:\Users\Nicolas Zamora\Documents\PSoC Creator\Practica1\Medidor_de_Frecuencia.cydsn\main.c" Guid="dea2142e-6184-4140-ab89-8a10df9d0131" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="950, 416" SelectedTabbedMdiWindow="dea2142e-6184-4140-ab89-8a10df9d0131"><DocumentWindow Key="C:\Users\Nicolas Zamora\Documents\PSoC Creator\Practica1\Medidor_de_Frecuencia.cydsn\TopDesign\TopDesign.cysch" Guid="a2009fa5-71f0-4fcd-99cb-c5fcb17269ae" /><DocumentWindow Key="C:\Users\Nicolas Zamora\Documents\PSoC Creator\Practica1\Medidor_de_Frecuencia.cydsn\main.c" Guid="dea2142e-6184-4140-ab89-8a10df9d0131" /><DocumentWindow Key="C:\Users\Nicolas Zamora\Documents\PSoC Creator\Practica1\Medidor_de_Frecuencia.cydsn\Medidor_de_Frecuencia.cydwr" Guid="afa26d14-7f38-4e39-aabd-4e0974803d0b" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

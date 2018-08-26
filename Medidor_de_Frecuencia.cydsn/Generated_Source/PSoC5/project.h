@@ -26,6 +26,8 @@
 #include "Qi_aliases.h"
 #include "Qi.h"
 #include "Qi_irq.h"
+#include "Pin_aliases.h"
+#include "Pin.h"
 #include "LCD_LCDPort_aliases.h"
 #include "LCD_LCDPort.h"
 #include "core_cm3_psoc5.h"
