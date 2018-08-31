@@ -487,7 +487,7 @@ END GROUP
                 0x00000800                ee_size = (CY_APPL_LOADABLE && ! (CY_EE_IN_BTLDR))?(CY_EE_SIZE / CY_APPL_MAX):CY_EE_SIZE
                 [!provide]                PROVIDE (CY_ECC_OFFSET, ecc_offset)
 
-.text           0x00000000      0x9ce
+.text           0x00000000      0x9de
  CREATE_OBJECT_SYMBOLS
                 0x00000000                PROVIDE (__cy_interrupt_vector, RomVectors)
  *(.romvectors)
@@ -504,213 +504,214 @@ END GROUP
                 0x00000001                ASSERT ((((appl_start + .) <= 0x10000) || 0x1), DMA Init must be within the first 64k of flash)
  *(.text .text.* .gnu.linkonce.t.*)
  .text          0x00000028       0x5c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
- .text.InteQi   0x00000084       0x30 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .text.InteQi   0x00000084       0x3c .\CortexM3\ARM_GCC_541\Debug\main.o
                 0x00000084                InteQi
- .text.InteSw   0x000000b4       0x68 .\CortexM3\ARM_GCC_541\Debug\main.o
-                0x000000b4                InteSw
- .text.main     0x0000011c      0x14c .\CortexM3\ARM_GCC_541\Debug\main.o
-                0x0000011c                main
+ .text.InteSw   0x000000c0       0x6c .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x000000c0                InteSw
+ .text.impri    0x0000012c       0xd8 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x0000012c                impri
+ .text.main     0x00000204       0x78 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x00000204                main
  .text.CyClockStartupError
-                0x00000268        0x4 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x0000027c        0x4 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.cfg_write_bytes32
-                0x0000026c       0x34 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00000280       0x34 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.AnalogSetDefault
-                0x000002a0       0x28 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x000002b4       0x28 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.CYMEMZERO
-                0x000002c8        0xc .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x000002dc        0xc .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.ClockSetup
-                0x000002d4       0x9c .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x000002e8       0x9c .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.CYCONFIGCPY
-                0x00000370        0x8 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00000384        0x8 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .text.cyfitter_cfg
-                0x00000378      0x100 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
-                0x00000378                cyfitter_cfg
+                0x0000038c      0x100 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x0000038c                cyfitter_cfg
  .text.IntDefaultHandler
-                0x00000478       0x10 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
-                0x00000478                IntDefaultHandler
- .text.Start_c  0x00000488       0x4c .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
-                0x00000488                Start_c
+                0x0000048c       0x10 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x0000048c                IntDefaultHandler
+ .text.Start_c  0x0000049c       0x4c .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x0000049c                Start_c
  .text.initialize_psoc
-                0x000004d4       0x68 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
-                0x000004d4                initialize_psoc
+                0x000004e8       0x68 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x000004e8                initialize_psoc
  .text.sw_irq_SetVector
-                0x0000053c        0xc .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw_irq.o)
-                0x0000053c                sw_irq_SetVector
+                0x00000550        0xc .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw_irq.o)
+                0x00000550                sw_irq_SetVector
  .text.sw_irq_SetPriority
-                0x00000548       0x10 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw_irq.o)
-                0x00000548                sw_irq_SetPriority
+                0x0000055c       0x10 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw_irq.o)
+                0x0000055c                sw_irq_SetPriority
  .text.sw_irq_Enable
-                0x00000558        0xc .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw_irq.o)
-                0x00000558                sw_irq_Enable
+                0x0000056c        0xc .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw_irq.o)
+                0x0000056c                sw_irq_Enable
  .text.sw_irq_Disable
-                0x00000564        0xc .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw_irq.o)
-                0x00000564                sw_irq_Disable
+                0x00000578        0xc .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw_irq.o)
+                0x00000578                sw_irq_Disable
  .text.sw_irq_StartEx
-                0x00000570       0x1c .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw_irq.o)
-                0x00000570                sw_irq_StartEx
- .text.sw_Read  0x0000058c       0x10 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw.o)
-                0x0000058c                sw_Read
+                0x00000584       0x1c .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw_irq.o)
+                0x00000584                sw_irq_StartEx
+ .text.sw_Read  0x000005a0       0x10 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw.o)
+                0x000005a0                sw_Read
  .text.sw_ClearInterrupt
-                0x0000059c       0x10 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw.o)
-                0x0000059c                sw_ClearInterrupt
+                0x000005b0       0x10 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw.o)
+                0x000005b0                sw_ClearInterrupt
  .text.LCD_WrCntrlNib
-                0x000005ac       0x34 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
+                0x000005c0       0x34 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
  .text.LCD_WrDatNib
-                0x000005e0       0x44 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
+                0x000005f4       0x44 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
  .text.LCD_IsReady
-                0x00000624       0xe4 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
-                0x00000624                LCD_IsReady
+                0x00000638       0xe4 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
+                0x00000638                LCD_IsReady
  .text.LCD_WriteData
-                0x00000708       0x18 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
-                0x00000708                LCD_WriteData
+                0x0000071c       0x18 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
+                0x0000071c                LCD_WriteData
  .text.LCD_PrintString
-                0x00000720       0x1c .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
-                0x00000720                LCD_PrintString
+                0x00000734       0x1c .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
+                0x00000734                LCD_PrintString
  .text.LCD_WriteControl
-                0x0000073c       0x18 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
-                0x0000073c                LCD_WriteControl
+                0x00000750       0x18 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
+                0x00000750                LCD_WriteControl
  .text.LCD_Init
-                0x00000754       0x6c .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
-                0x00000754                LCD_Init
+                0x00000768       0x6c .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
+                0x00000768                LCD_Init
  .text.LCD_Enable
-                0x000007c0       0x14 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
-                0x000007c0                LCD_Enable
+                0x000007d4       0x14 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
+                0x000007d4                LCD_Enable
  .text.LCD_Start
-                0x000007d4       0x1c .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
-                0x000007d4                LCD_Start
+                0x000007e8       0x1c .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
+                0x000007e8                LCD_Start
  .text.LCD_Position
-                0x000007f0       0x3c .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
-                0x000007f0                LCD_Position
+                0x00000804       0x3c .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
+                0x00000804                LCD_Position
  .text.LCD_PrintU32Number
-                0x0000082c       0x64 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
-                0x0000082c                LCD_PrintU32Number
- .text.CyDelay  0x00000890       0x2c .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyLib.o)
-                0x00000890                CyDelay
+                0x00000840       0x64 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
+                0x00000840                LCD_PrintU32Number
+ .text.CyDelay  0x000008a4       0x2c .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyLib.o)
+                0x000008a4                CyDelay
  .text.CyDelayUs
-                0x000008bc       0x14 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyLib.o)
-                0x000008bc                CyDelayUs
+                0x000008d0       0x14 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyLib.o)
+                0x000008d0                CyDelayUs
  .text.Qi_ClearInterrupt
-                0x000008d0        0xc .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi.o)
-                0x000008d0                Qi_ClearInterrupt
+                0x000008e4        0xc .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi.o)
+                0x000008e4                Qi_ClearInterrupt
  .text.Qi_irq_SetVector
-                0x000008dc        0xc .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi_irq.o)
-                0x000008dc                Qi_irq_SetVector
+                0x000008f0        0xc .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi_irq.o)
+                0x000008f0                Qi_irq_SetVector
  .text.Qi_irq_SetPriority
-                0x000008e8       0x10 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi_irq.o)
-                0x000008e8                Qi_irq_SetPriority
+                0x000008fc       0x10 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi_irq.o)
+                0x000008fc                Qi_irq_SetPriority
  .text.Qi_irq_Enable
-                0x000008f8        0xc .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi_irq.o)
-                0x000008f8                Qi_irq_Enable
+                0x0000090c        0xc .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi_irq.o)
+                0x0000090c                Qi_irq_Enable
  .text.Qi_irq_Disable
-                0x00000904        0xc .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi_irq.o)
-                0x00000904                Qi_irq_Disable
+                0x00000918        0xc .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi_irq.o)
+                0x00000918                Qi_irq_Disable
  .text.Qi_irq_StartEx
-                0x00000910       0x1c .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi_irq.o)
-                0x00000910                Qi_irq_StartEx
- *fill*         0x0000092c        0x4 
- .text          0x00000930       0x20 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyBootAsmGnu.o)
-                0x00000930                CyDelayCycles
-                0x00000940                CyEnterCriticalSection
-                0x00000948                CyExitCriticalSection
- .text.__errno  0x00000950        0xc c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
-                0x00000950                __errno
+                0x00000924       0x1c .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi_irq.o)
+                0x00000924                Qi_irq_StartEx
+ .text          0x00000940       0x20 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyBootAsmGnu.o)
+                0x00000940                CyDelayCycles
+                0x00000950                CyEnterCriticalSection
+                0x00000958                CyExitCriticalSection
+ .text.__errno  0x00000960        0xc c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+                0x00000960                __errno
  .text.__libc_init_array
-                0x0000095c       0x4c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
-                0x0000095c                __libc_init_array
- .text.memcpy   0x000009a8       0x16 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
-                0x000009a8                memcpy
- .text.memset   0x000009be       0x10 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
-                0x000009be                memset
+                0x0000096c       0x4c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+                0x0000096c                __libc_init_array
+ .text.memcpy   0x000009b8       0x16 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+                0x000009b8                memcpy
+ .text.memset   0x000009ce       0x10 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+                0x000009ce                memset
  *(.plt)
  *(.gnu.warning)
  *(.glue_7t)
- .glue_7t       0x000009ce        0x0 linker stubs
+ .glue_7t       0x000009de        0x0 linker stubs
  *(.glue_7)
- .glue_7        0x000009ce        0x0 linker stubs
+ .glue_7        0x000009de        0x0 linker stubs
  *(.vfp11_veneer)
- .vfp11_veneer  0x000009ce        0x0 linker stubs
+ .vfp11_veneer  0x000009de        0x0 linker stubs
  *(.bootloader)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
  *(.gcc_except_table)
 
-.v4_bx          0x000009d0        0x0
- .v4_bx         0x000009d0        0x0 linker stubs
+.v4_bx          0x000009e0        0x0
+ .v4_bx         0x000009e0        0x0 linker stubs
 
-.iplt           0x000009d0        0x0
- .iplt          0x000009d0        0x0 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+.iplt           0x000009e0        0x0
+ .iplt          0x000009e0        0x0 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
 
-.eh_frame       0x000009d0        0x4
+.eh_frame       0x000009e0        0x4
  *(.eh_frame)
- .eh_frame      0x000009d0        0x0 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
- .eh_frame      0x000009d0        0x4 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtend.o
+ .eh_frame      0x000009e0        0x0 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .eh_frame      0x000009e0        0x4 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtend.o
                 [!provide]                PROVIDE (__exidx_start, .)
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x000009d4                __exidx_end = .
+                0x000009e4                __exidx_end = .
 
-.rodata         0x000009d4       0xc4
+.rodata         0x000009e4       0xcc
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.str1.4
-                0x000009d4       0x58 .\CortexM3\ARM_GCC_541\Debug\main.o
-                                 0x56 (size before relaxing)
- .rodata        0x00000a2c       0x30 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x000009e4       0x60 .\CortexM3\ARM_GCC_541\Debug\main.o
+                                 0x5e (size before relaxing)
+ .rodata        0x00000a44       0x30 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .rodata.str1.1
-                0x00000a5c        0x2 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
-                0x00000a60                . = ALIGN (0x4)
- *fill*         0x00000a5e        0x2 
+                0x00000a74        0x2 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+                0x00000a78                . = ALIGN (0x4)
+ *fill*         0x00000a76        0x2 
  *(.init)
- .init          0x00000a60        0x4 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
-                0x00000a60                _init
- .init          0x00000a64        0x8 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
-                0x00000a6c                . = ALIGN (0x4)
-                0x00000a6c                __preinit_array_start = .
+ .init          0x00000a78        0x4 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
+                0x00000a78                _init
+ .init          0x00000a7c        0x8 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
+                0x00000a84                . = ALIGN (0x4)
+                0x00000a84                __preinit_array_start = .
  *(.preinit_array)
-                0x00000a6c                __preinit_array_end = .
-                0x00000a6c                . = ALIGN (0x4)
-                0x00000a6c                __init_array_start = .
+                0x00000a84                __preinit_array_end = .
+                0x00000a84                . = ALIGN (0x4)
+                0x00000a84                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x00000a6c        0x4 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
- .init_array    0x00000a70        0x4 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
-                0x00000a74                __init_array_end = .
-                0x00000a74                . = ALIGN (0x4)
+ .init_array    0x00000a84        0x4 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .init_array    0x00000a88        0x4 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x00000a8c                __init_array_end = .
+                0x00000a8c                . = ALIGN (0x4)
  *(.fini)
- .fini          0x00000a74        0x4 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
-                0x00000a74                _fini
- .fini          0x00000a78        0x8 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
-                0x00000a80                . = ALIGN (0x4)
-                0x00000a80                __fini_array_start = .
+ .fini          0x00000a8c        0x4 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crti.o
+                0x00000a8c                _fini
+ .fini          0x00000a90        0x8 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtn.o
+                0x00000a98                . = ALIGN (0x4)
+                0x00000a98                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x00000a80        0x4 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+ .fini_array    0x00000a98        0x4 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
  *(SORT(.fini_array.*))
-                0x00000a84                __fini_array_end = .
-                0x00000a84                . = ALIGN (0x4)
+                0x00000a9c                __fini_array_end = .
+                0x00000a9c                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x00000a84                . = ALIGN (0x4)
+                0x00000a9c                . = ALIGN (0x4)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x00000a84                . = ALIGN (0x4)
-                0x00000a84                __cy_regions = .
-                0x00000a84        0x4 LONG 0xa98 __cy_region_init_ram
-                0x00000a88        0x4 LONG 0x1fff80c8 __cy_region_start_data
-                0x00000a8c        0x4 LONG 0x78 __cy_region_init_size_ram
-                0x00000a90        0x4 LONG 0x28 __cy_region_zero_size_ram
-                0x00000a94                __cy_regions_end = .
-                0x00000a98                . = ALIGN (0x8)
- *fill*         0x00000a94        0x4 
-                0x00000a98                _etext = .
+                0x00000a9c                . = ALIGN (0x4)
+                0x00000a9c                __cy_regions = .
+                0x00000a9c        0x4 LONG 0xab0 __cy_region_init_ram
+                0x00000aa0        0x4 LONG 0x1fff80c8 __cy_region_start_data
+                0x00000aa4        0x4 LONG 0x78 __cy_region_init_size_ram
+                0x00000aa8        0x4 LONG 0x28 __cy_region_zero_size_ram
+                0x00000aac                __cy_regions_end = .
+                0x00000ab0                . = ALIGN (0x8)
+ *fill*         0x00000aac        0x4 
+                0x00000ab0                _etext = .
 
 .cy_checksum_exclude
-                0x00000a98        0x0
+                0x00000ab0        0x0
  *(.cy_checksum_exclude)
 
 .ramvectors     0x1fff8000       0xc0
@@ -724,7 +725,7 @@ END GROUP
  .noinit        0x1fff80c0        0x1 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyLib.o)
                 0x1fff80c0                CyResetStatus
 
-.data           0x1fff80c8       0x78 load address 0x00000a98
+.data           0x1fff80c8       0x78 load address 0x00000ab0
                 0x1fff80c8                __cy_region_start_data = .
  *(.jcr)
  .jcr           0x1fff80c8        0x0 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
@@ -747,16 +748,17 @@ END GROUP
  *(.ram)
                 0x1fff8140                _edata = .
 
-.igot.plt       0x1fff8140        0x0 load address 0x00000b10
+.igot.plt       0x1fff8140        0x0 load address 0x00000b28
  .igot.plt      0x1fff8140        0x0 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
 
-.bss            0x1fff8140       0x28 load address 0x00000b10
+.bss            0x1fff8140       0x28 load address 0x00000b28
                 0x1fff8140                PROVIDE (__bss_start__, .)
  *(.shbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
  .bss           0x1fff8140       0x1c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
  .bss           0x1fff815c        0x6 .\CortexM3\ARM_GCC_541\Debug\main.o
-                0x1fff815c                de
+                0x1fff815c                h
+                0x1fff815d                de
                 0x1fff815e                i
                 0x1fff8160                f
  .bss           0x1fff8162        0x2 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
@@ -772,11 +774,11 @@ END GROUP
                 0x1fff8168                __end = .
                 0x1fff8168                PROVIDE (end, .)
                 0x1fff8168                PROVIDE (__bss_end__, .)
-                0x00000a98                __cy_region_init_ram = LOADADDR (.data)
+                0x00000ab0                __cy_region_init_ram = LOADADDR (.data)
                 0x00000078                __cy_region_init_size_ram = (_edata - ADDR (.data))
                 0x00000028                __cy_region_zero_size_ram = (_end - _edata)
 
-.heap           0x1fff8168       0x80 load address 0x00000b10
+.heap           0x1fff8168       0x80 load address 0x00000b28
                 0x1fff8168                . = _end
                 0x1fff81e8                . = (. + 0x80)
  *fill*         0x1fff8168       0x80 
@@ -796,9 +798,9 @@ END GROUP
 .cyloadablemeta
  *(.cyloadablemeta)
 
-.cyconfigecc    0x80000000      0x104
+.cyconfigecc    0x80000000       0xb0
  *(.cyconfigecc)
- .cyconfigecc   0x80000000      0x104 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .cyconfigecc   0x80000000       0xb0 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
                 0x80000000                cy_meta_configecc
 
 .cycustnvl      0x90000000        0x4
@@ -827,8 +829,8 @@ END GROUP
  .cymeta        0x90500000        0xc .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
                 0x90500000                cy_metadata
 
-.rel.dyn        0x00000b10        0x0 load address 0x9050000c
- .rel.iplt      0x00000b10        0x0 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
+.rel.dyn        0x00000b28        0x0 load address 0x9050000c
+ .rel.iplt      0x00000b28        0x0 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/crtbegin.o
 
 .stab
  *(.stab)
@@ -848,138 +850,138 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x770
+.debug_aranges  0x00000000      0x778
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x30 .\CortexM3\ARM_GCC_541\Debug\main.o
+                0x00000000       0x38 .\CortexM3\ARM_GCC_541\Debug\main.o
  .debug_aranges
-                0x00000030       0x58 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x00000038       0x58 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
  .debug_aranges
-                0x00000088       0x18 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+                0x00000090       0x18 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
  .debug_aranges
-                0x000000a0       0x48 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+                0x000000a8       0x48 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
  .debug_aranges
-                0x000000e8       0x80 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw_irq.o)
+                0x000000f0       0x80 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw_irq.o)
  .debug_aranges
-                0x00000168       0x48 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw.o)
+                0x00000170       0x48 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw.o)
  .debug_aranges
-                0x000001b0       0x98 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
+                0x000001b8       0x98 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
  .debug_aranges
-                0x00000248      0x2a0 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyLib.o)
+                0x00000250      0x2a0 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyLib.o)
  .debug_aranges
-                0x000004e8       0x98 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(cyPm.o)
+                0x000004f0       0x98 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(cyPm.o)
  .debug_aranges
-                0x00000580       0x48 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi.o)
+                0x00000588       0x48 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi.o)
  .debug_aranges
-                0x000005c8       0x80 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi_irq.o)
+                0x000005d0       0x80 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi_irq.o)
  .debug_aranges
-                0x00000648       0x20 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyBootAsmGnu.o)
+                0x00000650       0x20 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyBootAsmGnu.o)
  .debug_aranges
-                0x00000668       0x88 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyFlash.o)
+                0x00000670       0x88 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyFlash.o)
  .debug_aranges
-                0x000006f0       0x80 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CySpc.o)
+                0x000006f8       0x80 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CySpc.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x47d7
+.debug_info     0x00000000     0x47c7
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0x47a .\CortexM3\ARM_GCC_541\Debug\main.o
- .debug_info    0x0000047a      0x4ee .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_info    0x00000968      0x135 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
- .debug_info    0x00000a9d      0x3bb .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_info    0x00000e58      0x2d2 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw_irq.o)
- .debug_info    0x0000112a      0x174 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw.o)
- .debug_info    0x0000129e      0x715 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
- .debug_info    0x000019b3     0x1374 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyLib.o)
- .debug_info    0x00002d27      0xa2a .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(cyPm.o)
- .debug_info    0x00003751      0x174 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi.o)
- .debug_info    0x000038c5      0x2d2 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi_irq.o)
- .debug_info    0x00003b97       0xa3 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyBootAsmGnu.o)
- .debug_info    0x00003c3a      0x64d .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyFlash.o)
- .debug_info    0x00004287      0x550 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CySpc.o)
+ .debug_info    0x00000000      0x46b .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_info    0x0000046b      0x4ee .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_info    0x00000959      0x134 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_info    0x00000a8d      0x3bb .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_info    0x00000e48      0x2d2 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw_irq.o)
+ .debug_info    0x0000111a      0x174 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw.o)
+ .debug_info    0x0000128e      0x715 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
+ .debug_info    0x000019a3     0x1374 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyLib.o)
+ .debug_info    0x00002d17      0xa2a .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(cyPm.o)
+ .debug_info    0x00003741      0x174 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi.o)
+ .debug_info    0x000038b5      0x2d2 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi_irq.o)
+ .debug_info    0x00003b87       0xa3 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyBootAsmGnu.o)
+ .debug_info    0x00003c2a      0x64d .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyFlash.o)
+ .debug_info    0x00004277      0x550 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CySpc.o)
 
-.debug_abbrev   0x00000000     0x11ee
+.debug_abbrev   0x00000000     0x11fd
  *(.debug_abbrev)
- .debug_abbrev  0x00000000       0xf7 .\CortexM3\ARM_GCC_541\Debug\main.o
- .debug_abbrev  0x000000f7      0x1fe .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_abbrev  0x000002f5       0x66 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
- .debug_abbrev  0x0000035b      0x1e8 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_abbrev  0x00000543      0x173 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw_irq.o)
- .debug_abbrev  0x000006b6       0x90 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw.o)
- .debug_abbrev  0x00000746      0x157 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
- .debug_abbrev  0x0000089d      0x254 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyLib.o)
- .debug_abbrev  0x00000af1      0x1ab .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(cyPm.o)
- .debug_abbrev  0x00000c9c       0x90 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi.o)
- .debug_abbrev  0x00000d2c      0x173 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi_irq.o)
- .debug_abbrev  0x00000e9f       0x14 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyBootAsmGnu.o)
- .debug_abbrev  0x00000eb3      0x1a7 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyFlash.o)
- .debug_abbrev  0x0000105a      0x194 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CySpc.o)
+ .debug_abbrev  0x00000000      0x10f .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_abbrev  0x0000010f      0x1fe .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_abbrev  0x0000030d       0x5d .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_abbrev  0x0000036a      0x1e8 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_abbrev  0x00000552      0x173 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw_irq.o)
+ .debug_abbrev  0x000006c5       0x90 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw.o)
+ .debug_abbrev  0x00000755      0x157 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
+ .debug_abbrev  0x000008ac      0x254 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyLib.o)
+ .debug_abbrev  0x00000b00      0x1ab .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(cyPm.o)
+ .debug_abbrev  0x00000cab       0x90 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi.o)
+ .debug_abbrev  0x00000d3b      0x173 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi_irq.o)
+ .debug_abbrev  0x00000eae       0x14 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyBootAsmGnu.o)
+ .debug_abbrev  0x00000ec2      0x1a7 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyFlash.o)
+ .debug_abbrev  0x00001069      0x194 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CySpc.o)
 
-.debug_line     0x00000000     0x1d59
+.debug_line     0x00000000     0x1d6a
  *(.debug_line)
- .debug_line    0x00000000      0x204 .\CortexM3\ARM_GCC_541\Debug\main.o
- .debug_line    0x00000204      0x1d5 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_line    0x000003d9      0x141 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
- .debug_line    0x0000051a      0x234 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_line    0x0000074e      0x133 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw_irq.o)
- .debug_line    0x00000881       0xb9 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw.o)
- .debug_line    0x0000093a      0x1dc .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
- .debug_line    0x00000b16      0x816 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyLib.o)
- .debug_line    0x0000132c      0x367 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(cyPm.o)
- .debug_line    0x00001693       0xb3 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi.o)
- .debug_line    0x00001746      0x133 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi_irq.o)
- .debug_line    0x00001879       0x66 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyBootAsmGnu.o)
- .debug_line    0x000018df      0x21a .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyFlash.o)
- .debug_line    0x00001af9      0x260 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CySpc.o)
+ .debug_line    0x00000000      0x215 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_line    0x00000215      0x1d5 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_line    0x000003ea      0x141 .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_line    0x0000052b      0x234 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_line    0x0000075f      0x133 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw_irq.o)
+ .debug_line    0x00000892       0xb9 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw.o)
+ .debug_line    0x0000094b      0x1dc .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
+ .debug_line    0x00000b27      0x816 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyLib.o)
+ .debug_line    0x0000133d      0x367 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(cyPm.o)
+ .debug_line    0x000016a4       0xb3 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi.o)
+ .debug_line    0x00001757      0x133 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi_irq.o)
+ .debug_line    0x0000188a       0x66 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyBootAsmGnu.o)
+ .debug_line    0x000018f0      0x21a .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyFlash.o)
+ .debug_line    0x00001b0a      0x260 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CySpc.o)
 
-.debug_frame    0x00000000     0x13d0
+.debug_frame    0x00000000     0x13f0
  *(.debug_frame)
- .debug_frame   0x00000000       0x64 .\CortexM3\ARM_GCC_541\Debug\main.o
- .debug_frame   0x00000064       0xe4 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_frame   0x00000148       0xb8 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_frame   0x00000200      0x104 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw_irq.o)
- .debug_frame   0x00000304       0x70 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw.o)
- .debug_frame   0x00000374      0x1e8 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
- .debug_frame   0x0000055c      0x738 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyLib.o)
- .debug_frame   0x00000c94      0x1f8 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(cyPm.o)
- .debug_frame   0x00000e8c       0x70 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi.o)
- .debug_frame   0x00000efc      0x104 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi_irq.o)
- .debug_frame   0x00001000      0x194 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyFlash.o)
- .debug_frame   0x00001194      0x180 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CySpc.o)
- .debug_frame   0x00001314       0x20 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
- .debug_frame   0x00001334       0x28 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
- .debug_frame   0x0000135c       0x2c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
- .debug_frame   0x00001388       0x28 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x000013b0       0x20 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x00000000       0x84 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_frame   0x00000084       0xe4 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_frame   0x00000168       0xb8 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_frame   0x00000220      0x104 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw_irq.o)
+ .debug_frame   0x00000324       0x70 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw.o)
+ .debug_frame   0x00000394      0x1e8 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
+ .debug_frame   0x0000057c      0x738 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyLib.o)
+ .debug_frame   0x00000cb4      0x1f8 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(cyPm.o)
+ .debug_frame   0x00000eac       0x70 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi.o)
+ .debug_frame   0x00000f1c      0x104 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi_irq.o)
+ .debug_frame   0x00001020      0x194 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyFlash.o)
+ .debug_frame   0x000011b4      0x180 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CySpc.o)
+ .debug_frame   0x00001334       0x20 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+ .debug_frame   0x00001354       0x28 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+ .debug_frame   0x0000137c       0x2c c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x000013a8       0x28 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x000013d0       0x20 c:/program files (x86)/cypress/psoc creator/4.2/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
 
-.debug_str      0x00000000     0x1738
+.debug_str      0x00000000     0x173e
  *(.debug_str)
- .debug_str     0x00000000      0x229 .\CortexM3\ARM_GCC_541\Debug\main.o
-                                0x271 (size before relaxing)
- .debug_str     0x00000229      0x17a .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_str     0x00000000      0x22f .\CortexM3\ARM_GCC_541\Debug\main.o
+                                0x277 (size before relaxing)
+ .debug_str     0x0000022f      0x17a .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
                                 0x322 (size before relaxing)
- .debug_str     0x000003a3       0x7f .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
+ .debug_str     0x000003a9       0x7f .\CortexM3\ARM_GCC_541\Debug\cymetadata.o
                                 0x1f7 (size before relaxing)
- .debug_str     0x00000422      0x144 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_str     0x00000428      0x144 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
                                 0x31d (size before relaxing)
- .debug_str     0x00000566       0xfd .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw_irq.o)
+ .debug_str     0x0000056c       0xfd .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw_irq.o)
                                 0x2c7 (size before relaxing)
- .debug_str     0x00000663       0x71 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw.o)
+ .debug_str     0x00000669       0x71 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw.o)
                                 0x21c (size before relaxing)
- .debug_str     0x000006d4      0x13d .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
+ .debug_str     0x000006da      0x13d .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
                                 0x33e (size before relaxing)
- .debug_str     0x00000811      0x816 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyLib.o)
+ .debug_str     0x00000817      0x816 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyLib.o)
                                 0xa5a (size before relaxing)
- .debug_str     0x00001027      0x365 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(cyPm.o)
+ .debug_str     0x0000102d      0x365 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(cyPm.o)
                                 0x746 (size before relaxing)
- .debug_str     0x0000138c       0x60 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi.o)
+ .debug_str     0x00001392       0x60 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi.o)
                                 0x21c (size before relaxing)
- .debug_str     0x000013ec       0xe5 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi_irq.o)
+ .debug_str     0x000013f2       0xe5 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi_irq.o)
                                 0x2c7 (size before relaxing)
- .debug_str     0x000014d1      0x1bb .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyFlash.o)
+ .debug_str     0x000014d7      0x1bb .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyFlash.o)
                                 0x3d3 (size before relaxing)
- .debug_str     0x0000168c       0xac .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CySpc.o)
+ .debug_str     0x00001692       0xac .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CySpc.o)
                                 0x34b (size before relaxing)
 
 .debug_loc      0x00000000     0x1f41
@@ -999,20 +1001,20 @@ END GROUP
 .debug_macinfo
  *(.debug_macinfo)
 
-.debug_ranges   0x00000000      0x678
+.debug_ranges   0x00000000      0x680
  *(.debug_ranges)
- .debug_ranges  0x00000000       0x20 .\CortexM3\ARM_GCC_541\Debug\main.o
- .debug_ranges  0x00000020       0x48 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
- .debug_ranges  0x00000068       0x38 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
- .debug_ranges  0x000000a0       0x70 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw_irq.o)
- .debug_ranges  0x00000110       0x38 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw.o)
- .debug_ranges  0x00000148       0x88 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
- .debug_ranges  0x000001d0      0x290 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyLib.o)
- .debug_ranges  0x00000460       0x88 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(cyPm.o)
- .debug_ranges  0x000004e8       0x38 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi.o)
- .debug_ranges  0x00000520       0x70 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi_irq.o)
- .debug_ranges  0x00000590       0x78 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyFlash.o)
- .debug_ranges  0x00000608       0x70 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CySpc.o)
+ .debug_ranges  0x00000000       0x28 .\CortexM3\ARM_GCC_541\Debug\main.o
+ .debug_ranges  0x00000028       0x48 .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_ranges  0x00000070       0x38 .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o
+ .debug_ranges  0x000000a8       0x70 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw_irq.o)
+ .debug_ranges  0x00000118       0x38 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(sw.o)
+ .debug_ranges  0x00000150       0x88 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(LCD.o)
+ .debug_ranges  0x000001d8      0x290 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyLib.o)
+ .debug_ranges  0x00000468       0x88 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(cyPm.o)
+ .debug_ranges  0x000004f0       0x38 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi.o)
+ .debug_ranges  0x00000528       0x70 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(Qi_irq.o)
+ .debug_ranges  0x00000598       0x78 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CyFlash.o)
+ .debug_ranges  0x00000610       0x70 .\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.a(CySpc.o)
 
 .comment        0x00000000       0x6e
  .comment       0x00000000       0x6e .\CortexM3\ARM_GCC_541\Debug\main.o

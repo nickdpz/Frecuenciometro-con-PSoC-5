@@ -1,5 +1,5 @@
 -- Project:   Medidor_de_Frecuencia
--- Generated: 08/25/2018 20:14:40
+-- Generated: 08/31/2018 11:50:14
 -- PSoC Creator  4.2
 
 ENTITY Medidor_de_Frecuencia IS
@@ -47,10 +47,6 @@ ARCHITECTURE __DEFAULT__ OF Medidor_de_Frecuencia IS
     SIGNAL \FreqDiv_1:count_0\ : bit;
     SIGNAL \FreqDiv_1:count_1\ : bit;
     SIGNAL \FreqDiv_1:count_2\ : bit;
-    SIGNAL \FreqDiv_1:count_3\ : bit;
-    SIGNAL \FreqDiv_1:count_4\ : bit;
-    SIGNAL \FreqDiv_1:count_5\ : bit;
-    SIGNAL \FreqDiv_1:count_6\ : bit;
     SIGNAL \FreqDiv_1:not_last_reset\ : bit;
     SIGNAL \\\LCD:LCDPort(0)\\__PA\ : bit;
     SIGNAL \\\LCD:LCDPort(1)\\__PA\ : bit;
@@ -96,13 +92,9 @@ ARCHITECTURE __DEFAULT__ OF Medidor_de_Frecuencia IS
     ATTRIBUTE Location OF Pin(0) : LABEL IS "P2[1]";
     ATTRIBUTE lib_model OF Net_79 : LABEL IS "macrocell1";
     ATTRIBUTE lib_model OF \FreqDiv_1:not_last_reset\ : LABEL IS "macrocell2";
-    ATTRIBUTE lib_model OF \FreqDiv_1:count_6\ : LABEL IS "macrocell3";
-    ATTRIBUTE lib_model OF \FreqDiv_1:count_5\ : LABEL IS "macrocell4";
-    ATTRIBUTE lib_model OF \FreqDiv_1:count_4\ : LABEL IS "macrocell5";
-    ATTRIBUTE lib_model OF \FreqDiv_1:count_3\ : LABEL IS "macrocell6";
-    ATTRIBUTE lib_model OF \FreqDiv_1:count_2\ : LABEL IS "macrocell7";
-    ATTRIBUTE lib_model OF \FreqDiv_1:count_1\ : LABEL IS "macrocell8";
-    ATTRIBUTE lib_model OF \FreqDiv_1:count_0\ : LABEL IS "macrocell9";
+    ATTRIBUTE lib_model OF \FreqDiv_1:count_2\ : LABEL IS "macrocell3";
+    ATTRIBUTE lib_model OF \FreqDiv_1:count_1\ : LABEL IS "macrocell4";
+    ATTRIBUTE lib_model OF \FreqDiv_1:count_0\ : LABEL IS "macrocell5";
     COMPONENT clockblockcell
         PORT (
             dclk_0 : OUT std_ulogic;
@@ -766,7 +758,7 @@ BEGIN
             slew_rate => "0",
             spanning => 0,
             sw_only => 0,
-            use_annotation => "0",
+            use_annotation => "1",
             vtrip => "10",
             width => 1,
             in_clk_inv => 0,
@@ -822,7 +814,7 @@ BEGIN
 
     Net_79:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1) + (!main_0 * main_2 * main_3 * !main_4 * !main_5 * !main_6 * main_7 * main_8) + (main_0 * main_1 * !main_2 * main_3 * main_4 * !main_5 * !main_6 * !main_7 * main_8)",
+            eqn_main => "(!main_0 * !main_1) + (!main_0 * main_2 * !main_3 * !main_4) + (main_0 * main_1 * !main_2 * main_3 * !main_4)",
             regmode => 2,
             clk_inv => '0',
             clken_mode => 1)
@@ -832,13 +824,9 @@ BEGIN
             clock_0 => ClockBlock_1k,
             main_0 => Net_79,
             main_1 => \FreqDiv_1:not_last_reset\,
-            main_2 => \FreqDiv_1:count_6\,
-            main_3 => \FreqDiv_1:count_5\,
-            main_4 => \FreqDiv_1:count_4\,
-            main_5 => \FreqDiv_1:count_3\,
-            main_6 => \FreqDiv_1:count_2\,
-            main_7 => \FreqDiv_1:count_1\,
-            main_8 => \FreqDiv_1:count_0\);
+            main_2 => \FreqDiv_1:count_2\,
+            main_3 => \FreqDiv_1:count_1\,
+            main_4 => \FreqDiv_1:count_0\);
 
     \FreqDiv_1:not_last_reset\:macrocell
         GENERIC MAP(
@@ -851,78 +839,9 @@ BEGIN
             clk_en => open,
             clock_0 => ClockBlock_1k);
 
-    \FreqDiv_1:count_6\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * main_1 * main_2 * !main_3 * !main_4 * !main_5 * main_6 * main_7) + (main_0 * main_2 * main_3 * main_4 * main_5 * main_6 * main_7)",
-            regmode => 2,
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => \FreqDiv_1:count_6\,
-            clk_en => open,
-            clock_0 => ClockBlock_1k,
-            main_0 => \FreqDiv_1:not_last_reset\,
-            main_1 => \FreqDiv_1:count_6\,
-            main_2 => \FreqDiv_1:count_5\,
-            main_3 => \FreqDiv_1:count_4\,
-            main_4 => \FreqDiv_1:count_3\,
-            main_5 => \FreqDiv_1:count_2\,
-            main_6 => \FreqDiv_1:count_1\,
-            main_7 => \FreqDiv_1:count_0\);
-
-    \FreqDiv_1:count_5\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * main_1 * main_2 * !main_3 * !main_4 * !main_5 * main_6 * main_7) + (main_0 * main_3 * main_4 * main_5 * main_6 * main_7)",
-            regmode => 2,
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => \FreqDiv_1:count_5\,
-            clk_en => open,
-            clock_0 => ClockBlock_1k,
-            main_0 => \FreqDiv_1:not_last_reset\,
-            main_1 => \FreqDiv_1:count_6\,
-            main_2 => \FreqDiv_1:count_5\,
-            main_3 => \FreqDiv_1:count_4\,
-            main_4 => \FreqDiv_1:count_3\,
-            main_5 => \FreqDiv_1:count_2\,
-            main_6 => \FreqDiv_1:count_1\,
-            main_7 => \FreqDiv_1:count_0\);
-
-    \FreqDiv_1:count_4\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * main_1 * main_2 * main_3 * main_4)",
-            regmode => 2,
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => \FreqDiv_1:count_4\,
-            clk_en => open,
-            clock_0 => ClockBlock_1k,
-            main_0 => \FreqDiv_1:not_last_reset\,
-            main_1 => \FreqDiv_1:count_3\,
-            main_2 => \FreqDiv_1:count_2\,
-            main_3 => \FreqDiv_1:count_1\,
-            main_4 => \FreqDiv_1:count_0\);
-
-    \FreqDiv_1:count_3\:macrocell
-        GENERIC MAP(
-            eqn_main => "(main_0 * main_1 * main_2 * main_3)",
-            regmode => 2,
-            clk_inv => '0',
-            clken_mode => 1)
-        PORT MAP(
-            q => \FreqDiv_1:count_3\,
-            clk_en => open,
-            clock_0 => ClockBlock_1k,
-            main_0 => \FreqDiv_1:not_last_reset\,
-            main_1 => \FreqDiv_1:count_2\,
-            main_2 => \FreqDiv_1:count_1\,
-            main_3 => \FreqDiv_1:count_0\);
-
     \FreqDiv_1:count_2\:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0) + (main_1 * main_2 * !main_3 * !main_4 * !main_5) + (!main_6) + (!main_7)",
+            eqn_main => "(main_0 * main_1 * !main_2 * !main_3) + (main_0 * main_2 * main_3)",
             regmode => 2,
             clk_inv => '0',
             clken_mode => 1)
@@ -931,13 +850,9 @@ BEGIN
             clk_en => open,
             clock_0 => ClockBlock_1k,
             main_0 => \FreqDiv_1:not_last_reset\,
-            main_1 => \FreqDiv_1:count_6\,
-            main_2 => \FreqDiv_1:count_5\,
-            main_3 => \FreqDiv_1:count_4\,
-            main_4 => \FreqDiv_1:count_3\,
-            main_5 => \FreqDiv_1:count_2\,
-            main_6 => \FreqDiv_1:count_1\,
-            main_7 => \FreqDiv_1:count_0\);
+            main_1 => \FreqDiv_1:count_2\,
+            main_2 => \FreqDiv_1:count_1\,
+            main_3 => \FreqDiv_1:count_0\);
 
     \FreqDiv_1:count_1\:macrocell
         GENERIC MAP(
@@ -954,7 +869,7 @@ BEGIN
 
     \FreqDiv_1:count_0\:macrocell
         GENERIC MAP(
-            eqn_main => "(main_0)",
+            eqn_main => "(!main_0) + (main_1 * !main_2 * !main_3)",
             regmode => 2,
             clk_inv => '0',
             clken_mode => 1)
@@ -962,6 +877,9 @@ BEGIN
             q => \FreqDiv_1:count_0\,
             clk_en => open,
             clock_0 => ClockBlock_1k,
-            main_0 => \FreqDiv_1:not_last_reset\);
+            main_0 => \FreqDiv_1:not_last_reset\,
+            main_1 => \FreqDiv_1:count_2\,
+            main_2 => \FreqDiv_1:count_1\,
+            main_3 => \FreqDiv_1:count_0\);
 
 END __DEFAULT__;

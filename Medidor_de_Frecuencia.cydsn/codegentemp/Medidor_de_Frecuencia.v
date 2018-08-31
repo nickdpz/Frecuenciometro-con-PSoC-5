@@ -1,6 +1,6 @@
 // ======================================================================
 // Medidor_de_Frecuencia.v generated from TopDesign.cysch
-// 08/25/2018 at 20:14
+// 08/31/2018 at 11:50
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -240,6 +240,7 @@ endmodule
 module top ;
 
           wire  Net_76;
+    electrical  Net_107;
           wire  Net_79;
           wire  Net_83;
           wire  Net_82;
@@ -249,7 +250,6 @@ module top ;
     electrical  Net_26;
     electrical  Net_21;
     electrical  Net_41;
-    electrical  Net_20;
     electrical  Net_39;
     electrical  Net_38;
           wire  Net_5;
@@ -410,7 +410,7 @@ module top ;
 		  .io({tmpIO_0__Qi_net[0:0]}),
 		  .siovref(tmpSIOVREF__Qi_net),
 		  .interrupt({Net_12}),
-		  .annotation({Net_20}),
+		  .annotation({Net_107}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -430,7 +430,7 @@ module top ;
     cy_annotation_universal_v1_0 Q_1 (
         .connect({
             Net_41,
-            Net_20
+            Net_107
         })
     );
     defparam Q_1.comp_name = "PhotoTrans_v1_0";
@@ -440,7 +440,7 @@ module top ;
     cy_annotation_universal_v1_0 R_1 (
         .connect({
             Net_26,
-            Net_20
+            Net_107
         })
     );
     defparam R_1.comp_name = "Resistor_v1_0";
@@ -661,7 +661,7 @@ module top ;
 		  .sio_vohsel(""),
 		  .slew_rate(1'b0),
 		  .spanning(0),
-		  .use_annotation(1'b0),
+		  .use_annotation(1'b1),
 		  .vtrip(2'b10),
 		  .width(1),
 		  .ovt_hyst_trim(1'b0),
@@ -675,6 +675,7 @@ module top ;
 		  .io({tmpIO_0__Pin_net[0:0]}),
 		  .siovref(tmpSIOVREF__Pin_net),
 		  .interrupt({tmpINTERRUPT_0__Pin_net[0:0]}),
+		  .annotation({Net_107}),
 		  .in_clock({1'b0}),
 		  .in_clock_en({1'b1}),
 		  .in_reset({1'b0}),
@@ -701,9 +702,9 @@ module top ;
         .div(Net_79),
         .reset(Net_82),
         .clock(Net_83));
-    defparam FreqDiv_1.Divider = 100;
-    defparam FreqDiv_1.highPulse = 50;
-    defparam FreqDiv_1.numBits = 7;
+    defparam FreqDiv_1.Divider = 5;
+    defparam FreqDiv_1.highPulse = 3;
+    defparam FreqDiv_1.numBits = 3;
 
     assign Net_80 = 1'h1;
 
