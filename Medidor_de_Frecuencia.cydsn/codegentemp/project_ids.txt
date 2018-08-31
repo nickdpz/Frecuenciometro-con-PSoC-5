@@ -1,6 +1,6 @@
-C:\Users\Nicolas Zamora\Documents\PSoC Creator\Practica1\Medidor_de_Frecuencia.cydsn\Medidor_de_Frecuencia.cyprj|b577de0e-6fcc-46e2-86e9-5457f9e14ee1
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|3b2cabbd-8a20-4d90-915a-3054fa8eeb66
-C:\Users\Nicolas Zamora\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|6855f946-d6f9-47c8-bfbe-199a474a5e54
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|95b51a3d-72ac-4e37-b98e-c79040cf5468
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|fa7d30f7-fd6a-4046-bd3e-d2811ce2df7f
-C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|a921e633-3c8b-41d8-a239-4d462b7fddd8
+C:\Users\Nicolas Zamora\Documents\PSoC Creator\Practica1\Medidor_de_Frecuencia.cydsn\Medidor_de_Frecuencia.cyprj|0eda99f1-9aa0-4c1d-a96b-0c7e659f505d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|c9d26cf4-72b3-4fc6-8970-e12a2755dc4b
+C:\Users\Nicolas Zamora\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|a5a57668-e0c7-4378-af8a-2b989050934b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|fc1c9795-6209-4f28-b7a6-3ed7100d77e0
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|64b654dc-bd81-422c-b782-fc2a6981f62c
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|0e4bdd13-5050-4792-b5da-445ef2307a06

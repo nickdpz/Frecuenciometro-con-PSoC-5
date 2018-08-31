@@ -1,11 +1,14 @@
 dont_use_io iocell 1 0
 dont_use_io iocell 1 1
 dont_use_io iocell 1 3
-set_location "\FreqDiv_1:count_1\" macrocell 0 4 0 3
-set_location "\FreqDiv_1:count_2\" macrocell 0 4 0 1
-set_location "\FreqDiv_1:not_last_reset\" macrocell 0 4 1 0
-set_location "\FreqDiv_1:count_0\" macrocell 0 4 0 2
+set_location "\FreqDiv_1:not_last_reset\" macrocell 0 4 1 3
+set_location "\FreqDiv_1:count_2\" macrocell 0 4 1 1
+set_location "\FreqDiv_1:count_4\" macrocell 0 4 0 1
 set_location "Net_79" macrocell 0 4 0 0
+set_location "\FreqDiv_1:count_0\" macrocell 0 4 1 2
+set_location "\FreqDiv_1:count_1\" macrocell 0 4 1 0
+set_location "\FreqDiv_1:count_3\" macrocell 0 4 0 3
+set_location "\FreqDiv_1:count_5\" macrocell 0 4 0 2
 # Note: port 12 is the logical name for port 7
 set_io "\LCD:LCDPort(6)\" iocell 12 6
 # Note: port 12 is the logical name for port 7

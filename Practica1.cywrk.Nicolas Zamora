@@ -107,6 +107,34 @@
 <VisibleNodeIds>
 <v>Practica1</v>
 <v>Practica1\Medidor_de_Frecuencia</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\Qi.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\Qi_irq.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\sw.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Listing Files\sw_irq.lst</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.elf</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.hex</v>
+<v>Practica1\Medidor_de_Frecuencia\CortexM3\ARM_GCC_541\Debug\Medidor_de_Frecuencia.map</v>
+<v>Practica1\Medidor_de_Frecuencia\Medidor_de_Frecuencia.gpdsc</v>
 <v>Practica1\Medidor_de_Frecuencia\Medidor_de_Frecuencia.rpt</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>

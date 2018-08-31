@@ -1,6 +1,6 @@
 // ======================================================================
 // Medidor_de_Frecuencia.v generated from TopDesign.cysch
-// 08/31/2018 at 11:50
+// 08/31/2018 at 12:44
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -702,9 +702,9 @@ module top ;
         .div(Net_79),
         .reset(Net_82),
         .clock(Net_83));
-    defparam FreqDiv_1.Divider = 5;
-    defparam FreqDiv_1.highPulse = 3;
-    defparam FreqDiv_1.numBits = 3;
+    defparam FreqDiv_1.Divider = 50;
+    defparam FreqDiv_1.highPulse = 25;
+    defparam FreqDiv_1.numBits = 6;
 
     assign Net_80 = 1'h1;
 

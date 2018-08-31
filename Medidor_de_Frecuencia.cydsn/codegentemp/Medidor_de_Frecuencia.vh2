@@ -2,7 +2,7 @@
 --	Conversion of Medidor_de_Frecuencia.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Fri Aug 31 11:50:12 2018
+--	Fri Aug 31 12:45:00 2018
 --
 
 USE cypress.cypress.all;
@@ -77,9 +77,15 @@ SIGNAL Net_83 : bit;
 SIGNAL \FreqDiv_1:not_last_reset\ : bit;
 SIGNAL Net_82 : bit;
 SIGNAL Net_80 : bit;
+SIGNAL \FreqDiv_1:count_5\ : bit;
+SIGNAL \FreqDiv_1:count_4\ : bit;
+SIGNAL \FreqDiv_1:count_3\ : bit;
 SIGNAL \FreqDiv_1:count_2\ : bit;
 SIGNAL \FreqDiv_1:count_1\ : bit;
 SIGNAL \FreqDiv_1:count_0\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_5\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_4\ : bit;
+SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_3\ : bit;
 SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_2\ : bit;
 SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_1\ : bit;
 SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_0\ : bit;
@@ -142,8 +148,11 @@ SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_8\ : bit;
 SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_7\ : bit;
 SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_6\ : bit;
 SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_5\ : bit;
+SIGNAL \FreqDiv_1:MODIN1_5\ : bit;
 SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_4\ : bit;
+SIGNAL \FreqDiv_1:MODIN1_4\ : bit;
 SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_3\ : bit;
+SIGNAL \FreqDiv_1:MODIN1_3\ : bit;
 SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_2\ : bit;
 SIGNAL \FreqDiv_1:MODIN1_2\ : bit;
 SIGNAL \FreqDiv_1:MODULE_1:g2:a0:a_1\ : bit;
@@ -234,11 +243,8 @@ SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_7\ : bit;
 SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_7\ : bit;
 SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_6\ : bit;
 SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_6\ : bit;
-SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_5\ : bit;
 SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_5\ : bit;
-SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_4\ : bit;
 SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_4\ : bit;
-SIGNAL \FreqDiv_1:add_vi_vv_MODGEN_1_3\ : bit;
 SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_3\ : bit;
 SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_2\ : bit;
 SIGNAL \FreqDiv_1:MODULE_1:g2:a0:s_1\ : bit;
@@ -281,6 +287,9 @@ SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_0\ : bit;
 SIGNAL \FreqDiv_1:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\ : bit;
 SIGNAL Net_79D : bit;
 SIGNAL \FreqDiv_1:not_last_reset\\D\ : bit;
+SIGNAL \FreqDiv_1:count_5\\D\ : bit;
+SIGNAL \FreqDiv_1:count_4\\D\ : bit;
+SIGNAL \FreqDiv_1:count_3\\D\ : bit;
 SIGNAL \FreqDiv_1:count_2\\D\ : bit;
 SIGNAL \FreqDiv_1:count_1\\D\ : bit;
 SIGNAL \FreqDiv_1:count_0\\D\ : bit;
@@ -290,23 +299,50 @@ zero <=  ('0') ;
 
 tmpOE__sw_net_2 <=  ('1') ;
 
-Net_79D <= ((not \FreqDiv_1:count_1\ and not \FreqDiv_1:count_0\ and \FreqDiv_1:count_2\)
-	OR (Net_79 and \FreqDiv_1:count_0\)
-	OR (not \FreqDiv_1:count_1\ and Net_79)
+Net_79D <= ((not \FreqDiv_1:count_3\ and not \FreqDiv_1:count_2\ and not \FreqDiv_1:count_1\ and \FreqDiv_1:count_5\ and \FreqDiv_1:count_4\ and \FreqDiv_1:count_0\)
+	OR (Net_79 and \FreqDiv_1:count_1\)
 	OR (Net_79 and \FreqDiv_1:count_2\)
+	OR (not \FreqDiv_1:count_4\ and Net_79)
+	OR (Net_79 and \FreqDiv_1:count_0\)
+	OR (not \FreqDiv_1:count_3\ and Net_79)
+	OR (Net_79 and \FreqDiv_1:count_5\)
 	OR not \FreqDiv_1:not_last_reset\);
 
+\FreqDiv_1:count_5\\D\ <= ((not \FreqDiv_1:count_1\ and \FreqDiv_1:count_5\ and \FreqDiv_1:count_2\)
+	OR (not \FreqDiv_1:count_3\ and \FreqDiv_1:count_5\ and \FreqDiv_1:count_1\)
+	OR (not \FreqDiv_1:count_2\ and \FreqDiv_1:count_5\ and \FreqDiv_1:count_3\)
+	OR (not \FreqDiv_1:count_5\ and \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_4\ and \FreqDiv_1:count_3\ and \FreqDiv_1:count_2\ and \FreqDiv_1:count_1\ and \FreqDiv_1:count_0\)
+	OR (not \FreqDiv_1:count_0\ and \FreqDiv_1:count_5\)
+	OR (not \FreqDiv_1:count_4\ and \FreqDiv_1:count_5\)
+	OR (not \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_5\));
+
+\FreqDiv_1:count_4\\D\ <= ((not \FreqDiv_1:count_5\ and not \FreqDiv_1:count_1\ and \FreqDiv_1:count_4\)
+	OR (not \FreqDiv_1:count_1\ and \FreqDiv_1:count_4\ and \FreqDiv_1:count_2\)
+	OR (not \FreqDiv_1:count_3\ and \FreqDiv_1:count_4\ and \FreqDiv_1:count_1\)
+	OR (not \FreqDiv_1:count_2\ and \FreqDiv_1:count_4\ and \FreqDiv_1:count_3\)
+	OR (not \FreqDiv_1:count_4\ and \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_3\ and \FreqDiv_1:count_2\ and \FreqDiv_1:count_1\ and \FreqDiv_1:count_0\)
+	OR (not \FreqDiv_1:count_0\ and \FreqDiv_1:count_4\)
+	OR (not \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_4\));
+
+\FreqDiv_1:count_3\\D\ <= ((not \FreqDiv_1:count_3\ and \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_2\ and \FreqDiv_1:count_1\ and \FreqDiv_1:count_0\)
+	OR (not \FreqDiv_1:count_0\ and \FreqDiv_1:count_3\)
+	OR (not \FreqDiv_1:count_1\ and \FreqDiv_1:count_3\)
+	OR (not \FreqDiv_1:count_2\ and \FreqDiv_1:count_3\)
+	OR (not \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_3\));
+
 \FreqDiv_1:count_2\\D\ <= ((not \FreqDiv_1:count_2\ and \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_1\ and \FreqDiv_1:count_0\)
-	OR (not \FreqDiv_1:count_0\ and \FreqDiv_1:count_2\ and \FreqDiv_1:count_1\)
-	OR (not \FreqDiv_1:count_1\ and \FreqDiv_1:count_2\ and \FreqDiv_1:count_0\)
+	OR (not \FreqDiv_1:count_0\ and \FreqDiv_1:count_2\)
+	OR (not \FreqDiv_1:count_1\ and \FreqDiv_1:count_2\)
 	OR (not \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_2\));
 
-\FreqDiv_1:count_1\\D\ <= ((not \FreqDiv_1:count_1\ and \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_0\)
+\FreqDiv_1:count_1\\D\ <= ((not \FreqDiv_1:count_1\ and \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_2\ and \FreqDiv_1:count_0\)
+	OR (not \FreqDiv_1:count_1\ and \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_3\ and \FreqDiv_1:count_0\)
+	OR (not \FreqDiv_1:count_4\ and not \FreqDiv_1:count_1\ and \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_0\)
+	OR (not \FreqDiv_1:count_5\ and not \FreqDiv_1:count_1\ and \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_0\)
 	OR (not \FreqDiv_1:count_0\ and \FreqDiv_1:count_1\)
 	OR (not \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_1\));
 
-\FreqDiv_1:count_0\\D\ <= ((not \FreqDiv_1:count_0\ and \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_1\)
-	OR (not \FreqDiv_1:count_2\ and not \FreqDiv_1:count_0\ and \FreqDiv_1:not_last_reset\)
+\FreqDiv_1:count_0\\D\ <= ((not \FreqDiv_1:count_0\ and \FreqDiv_1:not_last_reset\)
 	OR (not \FreqDiv_1:not_last_reset\ and \FreqDiv_1:count_0\));
 
 sw_irq:cy_isr_v1_0
@@ -725,6 +761,18 @@ Net_79:cy_dff
 	PORT MAP(d=>tmpOE__sw_net_2,
 		clk=>Net_83,
 		q=>\FreqDiv_1:not_last_reset\);
+\FreqDiv_1:count_5\:cy_dff
+	PORT MAP(d=>\FreqDiv_1:count_5\\D\,
+		clk=>Net_83,
+		q=>\FreqDiv_1:count_5\);
+\FreqDiv_1:count_4\:cy_dff
+	PORT MAP(d=>\FreqDiv_1:count_4\\D\,
+		clk=>Net_83,
+		q=>\FreqDiv_1:count_4\);
+\FreqDiv_1:count_3\:cy_dff
+	PORT MAP(d=>\FreqDiv_1:count_3\\D\,
+		clk=>Net_83,
+		q=>\FreqDiv_1:count_3\);
 \FreqDiv_1:count_2\:cy_dff
 	PORT MAP(d=>\FreqDiv_1:count_2\\D\,
 		clk=>Net_83,
